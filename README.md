@@ -111,3 +111,5 @@ module.exports = createCoreController('api::post.post', ({ strapi }) => ({
   },
 }))
 ```
+
+## Add react-markdown
