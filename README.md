@@ -2,6 +2,10 @@
 
 This is a blog starter project that uses the Strapi Rich Text Data Type and react-markdown to render the content.
 
+#### Screenshot
+
+<img src="screenshot.png" alt="screenshot" width="300">
+
 ## Run the project
 
 - clone this repo and `cd` into it
