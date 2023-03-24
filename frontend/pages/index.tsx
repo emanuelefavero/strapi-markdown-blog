@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { GetStaticProps } from 'next'
 import { server } from '@/config/server'
 
+import ReactMarkdown from 'react-markdown'
+
 import { IPost } from '@/types'
 
 type Props = {
@@ -22,7 +24,9 @@ export default function Home({ posts }: Props) {
                 {post.attributes.title}
               </Link>
             </h3>
-            <p>{post.attributes.content}</p>
+
+            {/* // * React Markdown - Post Content */}
+            <ReactMarkdown>{post.attributes.content}</ReactMarkdown>
 
             {/* display and format publishedAt Date */}
             <span className='date'>
