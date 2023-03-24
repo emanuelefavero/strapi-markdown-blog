@@ -78,3 +78,36 @@ the module ...
 ```bash
 npx create-next-app frontend
 ```
+
+> remove Next.js boilerplate
+
+#### Copy the following frontend code from this repo into the `frontend` folder:
+
+- `config/server.ts`
+- `pages/index.tsx`
+- `pages/posts/[slug].tsx`
+- `pages/_app.tsx`
+- `styles/globals.css`
+- `types.ts`
+
+## **IMPORTANT**
+
+### If you want to use slug instead of id in the url
+
+- open `backend/src/api/post/controllers/post.js`
+- replace `module.exports = createCoreController('api::post.post');` with the following code:
+
+```js
+module.exports = createCoreController('api::post.post', ({ strapi }) => ({
+  // Method 3: Replacing a core action
+  async findOne(ctx) {
+    const { id } = ctx.params
+    const entity = await strapi.db.query('api::post.post').findOne({
+      where: { slug: id },
+    })
+    const sanitizedEntity = await this.sanitizeOutput(entity, ctx)
+
+    return this.transformResponse(sanitizedEntity)
+  },
+}))
+```

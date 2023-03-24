@@ -1,4 +1,8 @@
+### get all posts
 GET http://localhost:1337/api/posts
 
-###
+### test id as unique identifier
 GET http://localhost:1337/api/posts/2
+
+### test slug as unique identifier
+GET http://localhost:1337/api/posts/tips-for-traveling-on-a-budget
