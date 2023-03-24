@@ -1,1 +1,4 @@
 GET http://localhost:1337/api/posts
+
+###
+GET http://localhost:1337/api/posts/2

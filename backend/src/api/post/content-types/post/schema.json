@@ -4,7 +4,8 @@
   "info": {
     "singularName": "post",
     "pluralName": "posts",
-    "displayName": "Post"
+    "displayName": "Post",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -22,6 +23,10 @@
       "type": "richtext",
       "required": true,
       "minLength": 3
+    },
+    "slug": {
+      "type": "uid",
+      "targetField": "title"
     }
   }
 }
