@@ -2,6 +2,28 @@
 
 This is a blog starter project that uses the Strapi Rich Text Data Type and react-markdown to render the content.
 
+## Run the project
+
+- clone this repo and `cd` into it
+
+### Run the backend
+
+- `cd` into the `backend` folder
+- run the following command to start Strapi in development mode:
+
+```bash
+npm run develop
+```
+
+### Run the frontend
+
+- `cd` into the `frontend` folder
+- run the following command to start Next.js in development mode:
+
+```bash
+npm run dev
+```
+
 ## **Steps to create a new project like this**
 
 ### Setup NVM
@@ -113,3 +135,24 @@ module.exports = createCoreController('api::post.post', ({ strapi }) => ({
 ```
 
 ## Add react-markdown
+
+- `cd` into the `frontend` folder
+- run the following command to install react-markdown:
+
+```bash
+npm install react-markdown
+```
+
+- import react-markdown in `pages/posts/index.tsx` and `pages/posts/[slug].tsx`:
+
+> In particular when you have post.attributes.content that is a rich text field (markdown)
+
+```js
+import ReactMarkdown from 'react-markdown'
+```
+
+- use react-markdown to render the content:
+
+```js
+<ReactMarkdown>{post.attributes.content}</ReactMarkdown>
+```
