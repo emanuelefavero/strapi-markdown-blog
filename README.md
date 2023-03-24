@@ -156,3 +156,13 @@ import ReactMarkdown from 'react-markdown'
 ```js
 <ReactMarkdown>{post.attributes.content}</ReactMarkdown>
 ```
+
+## Resources
+
+- [react-markdown](https://github.com/remarkjs/react-markdown#install)
+- [Strapi](https://strapi.io/)
+- [Next.js](https://nextjs.org/)
+
+## License
+
+- [MIT](LICENSE.md)
